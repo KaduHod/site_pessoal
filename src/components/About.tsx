@@ -1,4 +1,4 @@
-
+import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 
@@ -10,40 +10,45 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Sobre Mim</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-8"></div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-slate-700">
-              Olá! Sou Carlos Eduardo, um desenvolvedor full-stack com mais de 5 anos de experiência
-              no desenvolvimento de aplicações web e mobile.
+              Olá! Sou Carlos Ribas, um desenvolvedor full-stack com mais de 5 anos de experiência
+              no desenvolvimento de aplicações web.
             </p>
             <p className="text-lg text-slate-700">
-              Minha jornada começou em 2016, quando me formei em Ciência da Computação e desde então
+              Minha jornada começou em 2020, quando iniciei meu curso de Análise e Desenvolvimento de Sistemas desde então
               venho trabalhando com diversas tecnologias e frameworks modernos.
             </p>
             <p className="text-lg text-slate-700">
-              Atualmente atuo como desenvolvedor freelancer, ajudando empresas a transformar ideias em
+              Atualmente atuo como desenvolvedor backend, ajudando empresas a transformar ideias em
               soluções digitais eficientes e escaláveis.
             </p>
             <div className="pt-4">
-              <Button className="bg-blue-500 hover:bg-blue-600">
-                <Download className="mr-2 h-4 w-4" /> Baixar Currículo
-              </Button>
+                  <a
+                    href="https://cv.kadu.tec.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-sm text-blue-500 hover:text-blue-600"
+                  >
+                    <ExternalLink size={16} /> Acessar o meu currículo
+                  </a>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h3 className="text-4xl font-bold text-blue-500 mb-2">5+</h3>
+              <h3 className="text-4xl font-bold text-blue-500 mb-2">5</h3>
               <p className="text-slate-700">Anos de Experiência</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h3 className="text-4xl font-bold text-blue-500 mb-2">50+</h3>
+              <h3 className="text-4xl font-bold text-blue-500 mb-2">5</h3>
               <p className="text-slate-700">Projetos Concluídos</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h3 className="text-4xl font-bold text-blue-500 mb-2">30+</h3>
-              <p className="text-slate-700">Clientes Satisfeitos</p>
+              <h3 className="text-4xl font-bold text-blue-500 mb-2">3</h3>
+              <p className="text-slate-700">Experiêcia no setor ímobiliario, educacional e omnichannel</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-4xl font-bold text-blue-500 mb-2">100%</h3>

@@ -1,7 +1,6 @@
 
 import { ArrowDownCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-
+import profileImage from "../../static/img/eu.jpeg"
 const Hero = () => {
   return (
     <section id="início" className="min-h-screen flex items-center justify-center relative pt-16">
@@ -11,26 +10,18 @@ const Hero = () => {
           <div className="order-2 md:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-4">
               Olá, eu sou<br/>
-              <span className="text-blue-500">Carlos Eduardo</span>
+              <span className="text-blue-500">Carlos Ribas</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-8">
               Desenvolvedor full-stack apaixonado por criar soluções inovadoras e funcionais.
-              Especializado em React, Node.js e outras tecnologias modernas.
+              Especializado em Php, Node.js, Golang e um pouco de front end com React.js.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
-                Ver Projetos
-              </Button>
-              <Button size="lg" variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-50">
-                Entrar em Contato
-              </Button>
-            </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-              <img 
-                src="https://kadu.tec.br/static/img/eu.jpg" 
-                alt="Carlos Eduardo" 
+              <img
+                src={profileImage}
+                alt="Carlos Alberto"
                 className="w-full h-full object-cover"
               />
             </div>
