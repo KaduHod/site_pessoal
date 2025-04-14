@@ -19,7 +19,7 @@ jobs:
       - name: Instalar dependencias
         run: npm i
 
-      - name: Buidlar aplicação
+      - name: Buildar aplicação
         run: npm run build
 
       - name: Upload build
@@ -32,10 +32,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Run ls
+      - name: Download Build
         uses: actions/download-artifact@v3
         with:
           name: build-dist
           path: dist/
+      - name: List files
         run: ls -lah -tr
 
