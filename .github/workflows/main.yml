@@ -45,5 +45,5 @@ jobs:
         run: ls -lah -tr
 
       - name: Echo secret
-        run: Este é o segredo ${{ secrets.SECRET_REPO }}
+        run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
 
