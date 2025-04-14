@@ -30,6 +30,8 @@ jobs:
 
   deploy:
     needs: build
+    enviroment:
+      name: test enviroment
     runs-on: ubuntu-latest
     steps:
       - name: Download Build
