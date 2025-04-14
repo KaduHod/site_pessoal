@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Baixa o codigo fonte
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v4
         with:
           node-version: '23.3.0'
-      - uses: actions/checkout@v3
       - name: Instalar dependencias
         run: npm i
 
@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Upload build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-dist
           path: dist/
@@ -33,10 +33,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-dist
           path: dist/
+
       - name: List files
         run: ls -lah -tr
 
