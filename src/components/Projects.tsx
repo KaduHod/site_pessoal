@@ -135,7 +135,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-sm text-blue-500 hover:text-blue-600"
                   >
-                    <ExternalLink size={16} /> Demo
+                    <ExternalLink size={16} /> Acessar
                   </a>
 
                 </div>
