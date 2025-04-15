@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [ self-hosted, linux ]
     steps:
       # Baixa o codigo fonte
       - uses: actions/checkout@v3
@@ -33,7 +33,7 @@ jobs:
     environment:
       name: test enviroment
 
-    runs-on: ubuntu-latest
+    runs-on: [ self-hosted, linux ]
     steps:
       - name: Download Build
         uses: actions/download-artifact@v4
