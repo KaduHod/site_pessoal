@@ -53,8 +53,8 @@ jobs:
       - name: Copy dist to server
         run: scp "$GITHUB_WORKSPACE/app.zip" deployer@172.17.0.2:~/
 
-        # - name: Hello from
-        #   run:  |
-        #     chmod +x "$GITHUB_WORKSPACE/hello.sh"
-        #     "$GITHUB_WORKSPACE/hello.sh"
+      - name: Setup files to on server
+        run:  |
+        chmod +x "$GITHUB_WORKSPACE/deploy.sh"
+        "$GITHUB_WORKSPACE/deploy.sh"
 
