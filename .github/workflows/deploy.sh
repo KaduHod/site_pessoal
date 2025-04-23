@@ -1,5 +1,6 @@
 #!/bin/bash
 ssh deployer@172.17.0.2 <<EOF
+    rm -rf meu_site_deploy
     mkir -p meu_site_deploy
     ls -lah | grep meu_site
     unzip app.zip -d meu_site_deploy
