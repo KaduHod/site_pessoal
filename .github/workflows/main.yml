@@ -55,6 +55,6 @@ jobs:
 
       - name: Setup files to on server
         run:  |
-        chmod +x "$GITHUB_WORKSPACE/deploy.sh"
-        "$GITHUB_WORKSPACE/deploy.sh"
+          chmod +x "$GITHUB_WORKSPACE/deploy.sh"
+          "$GITHUB_WORKSPACE/deploy.sh"
 
