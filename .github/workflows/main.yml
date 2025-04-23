@@ -49,6 +49,6 @@ jobs:
 
       - name: Hello from
         run:  |
-          chmod +x ./hello.sh
-          ./script.sh
+          chmod +x "$GITHUB_WORKSPACE/hello.sh"
+          "$GITHUB_WORKSPACE./script.sh"
 
