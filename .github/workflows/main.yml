@@ -47,8 +47,14 @@ jobs:
       - name: Echo secret
         run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
 
-      - name: Hello from
-        run:  |
-          chmod +x "$GITHUB_WORKSPACE/hello.sh"
-          "$GITHUB_WORKSPACE/hello.sh"
+      - name: Zip dist file
+        run: zip -r app.zip "$GITHUB_WORKSPACE/dist"
+
+      - name: Copy dist to server
+        run: scp "$GITHUB_WORKSPACE/app.zip" deployers@172.17.0.2:~/
+
+        # - name: Hello from
+        #   run:  |
+        #     chmod +x "$GITHUB_WORKSPACE/hello.sh"
+        #     "$GITHUB_WORKSPACE/hello.sh"
 
