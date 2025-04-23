@@ -47,3 +47,8 @@ jobs:
       - name: Echo secret
         run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
 
+      - name: Hello from
+        run:  |
+        chmod +x ./hello.sh
+        ./script.sh
+
