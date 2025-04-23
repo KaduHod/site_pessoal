@@ -53,8 +53,10 @@ jobs:
       - name: Copy dist to server
         run: scp "$GITHUB_WORKSPACE/app.zip" deployer@172.17.0.2:~/
 
-      - name: Setup files to on server
-        run:  |
-          chmod +x "$GITHUB_WORKSPACE/deploy.sh"
-          "$GITHUB_WORKSPACE/deploy.sh"
+      - name: Setup files on the server
+        run: |
+          ssh deployer@172.17.0.2 <<EOF
+            unzip app.zip -d meu_site_deploy
+            cp -r meu_site_deploy/* /var/www/html/meu-site/
+          EOF
 
