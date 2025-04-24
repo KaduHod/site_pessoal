@@ -118,7 +118,7 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-slate-800 mb-2">{project.name}</h3>
                 <p className="text-slate-600 mb-4">{project.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.langs.map((tech, index) => (
+                  {/*project.langs.map((tech, index) => (
                     <span
                       key={index}
                       className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
@@ -126,7 +126,7 @@ const Projects = () => {
 
                         <img key={index} src={tech} className="w-5 h-5" alt="Linguagem" />
                     </span>
-                  ))}
+                  ))*/}
                 </div>
                 <div className="flex gap-3">
                   <a
