@@ -6,5 +6,5 @@ ssh -t deployer@172.17.0.2 <<EOF
     mkdir -p /var/www/html/meu-site
     unzip -o app.zip -d meu_site_deploy
     rm -rf /var/www/html/meu-site/*
-    cp -r meu_site_deploy/* /var/www/html/meu-site/
+    cp -r meu_site_deploy/dist* /var/www/html/meu-site/
 EOF
