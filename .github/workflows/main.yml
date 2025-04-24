@@ -42,10 +42,10 @@ jobs:
           path: dist/
 
       - name: List files
-        run: ls -lah -tr
+        run: ls -lah -tr dist
 
-      - name: Echo secret
-        run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
+        #      - name: Echo secret
+        #run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
 
       - name: Zip dist file
         run: zip -rj app.zip "$GITHUB_WORKSPACE/dist"
