@@ -118,7 +118,8 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-slate-800 mb-2">{project.name}</h3>
                 <p className="text-slate-600 mb-4">{project.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {/*project.langs.map((tech, index) => (
+                  {/* project.langs.map((tech, index) => (
+                      --sai
                     <span
                       key={index}
                       className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
