@@ -18,7 +18,8 @@ jobs:
           node-version: '23.3.0'
       - name: Instalar dependencias
         run: npm i
-
+      - name: Limpar build antigo
+        run: rm -rf dist
       - name: Buildar aplicação
         run: npm run build
 
