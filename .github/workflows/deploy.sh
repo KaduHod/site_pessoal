@@ -8,6 +8,6 @@ ssh deployer@172.17.0.2 <<EOF
     rm -rf meu_site_deploy
     mkdir -p meu_site_deploy
 
-    unzip app.zip -d meu_site_deploy
+    unzip -o app.zip -d meu_site_deploy
     cp -r meu_site_deploy/* /var/www/html/meu-site/
 EOF
