@@ -1,6 +1,6 @@
 #!/bin/bash
 ssh deployer@172.17.0.2 <<EOF
-    set -e  # Faz o script falhar se algum comando falhar
+    set -e # Faz o script falhar se algum comando falhar
     echo "O q ta aconteceno"
     sudo apt-get update
     sudo apt-get install -y unzip
