@@ -30,6 +30,8 @@ jobs:
           path: dist/
       - name: Ls files
         run: ls -lah -tr dist
+      - name: Ls files assets
+        run: ls -lah -tr dist/assets
 
   deploy:
     needs: build
