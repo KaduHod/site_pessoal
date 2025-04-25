@@ -59,6 +59,9 @@ jobs:
           cd "$GITHUB_WORKSPACE/dist"
           zip -r app.zip .
 
+      - name: List files assets
+        run: ls -lah -tr "$GITHUB_WORKSPACE/dist"
+
       - name: Copy dist to server
         run: scp "$GITHUB_WORKSPACE/app.zip" deployer@172.17.0.2:~/
 
