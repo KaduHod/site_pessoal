@@ -55,7 +55,7 @@ jobs:
         #run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
 
       - name: Zip dist file
-        run: zip -rj app.zip "$GITHUB_WORKSPACE/dist"
+        run: zip -r app.zip "$GITHUB_WORKSPACE/dist"
 
       - name: Copy dist to server
         run: scp "$GITHUB_WORKSPACE/app.zip" deployer@172.17.0.2:~/
