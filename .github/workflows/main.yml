@@ -49,6 +49,8 @@ jobs:
       - name: List files
         run: ls -lah -tr dist
 
+      - name: List files assets
+        run: ls -lah -tr dist/assets
         #      - name: Echo secret
         #run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
 
