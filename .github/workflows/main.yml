@@ -63,7 +63,7 @@ jobs:
         run: ls -lah -tr "$GITHUB_WORKSPACE/dist"
 
       - name: Copy dist to server
-        run: scp "$GITHUB_WORKSPACE/app.zip" deployer@172.17.0.2:~/
+        run: scp "$GITHUB_WORKSPACE/dist/app.zip" deployer@172.17.0.2:~/
 
       - name: Make script executable
         run: chmod +x deploy.sh
