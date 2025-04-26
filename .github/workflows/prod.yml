@@ -1,0 +1,76 @@
+name: deploy_prod
+on:
+  push:
+    branches: ["prod"]
+  pull_request:
+    branches: ["prod"]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [ self-hosted, linux ]
+    steps:
+      # Baixa o codigo fonte
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '23.3.0'
+
+      - name: Instalar dependencias
+        run: npm i
+
+      - name: Limpar build antigo
+        run: rm -rf dist
+
+      - name: Buildar aplicação
+        run: npm run build
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-dist
+          path: dist/
+
+      - name: Ls files
+        run: ls -lah -tr dist
+
+      - name: Ls files assets
+        run: ls -lah -tr dist/assets
+  deploy:
+    needs: build
+    environment:
+      name: test enviroment
+
+    runs-on: [ self-hosted, linux ]
+    steps:
+      - name: Download Build
+        uses: actions/download-artifact@v4
+        with:
+          name: build-dist
+          path: dist/
+
+      - name: List files
+        run: ls -lah -tr dist
+
+      - name: List files assets
+        run: ls -lah -tr dist/assets
+        #      - name: Echo secret
+        #run: echo Este é o segredo ${{ secrets.SECRET_REPO }}
+
+      - name: Zip dist file
+        run: |
+          cd "$GITHUB_WORKSPACE/dist"
+          zip -r app.zip .
+
+      - name: List files assets
+        run: ls -lah -tr "$GITHUB_WORKSPACE/dist"
+
+      - name: Copy dist to server
+        run: scp "$GITHUB_WORKSPACE/dist/app.zip" deployer:~/
+
+      - name: Make script executable
+        run: chmod +x deploy.prod.sh
+
+      - name: Setup files on the server
+        run: ./deploy.prod.sh
