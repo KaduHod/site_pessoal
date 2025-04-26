@@ -100,7 +100,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Meus Projetos</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-8"></div>
           <p className="text-lg text-slate-600">
-            Conheça alguns dos projetos que desenvolvi utilizando diversas tecnologias.
+            Conheça alguns dos projetos que desenvolvi utilizando diversas tecnologias como PHP, Node.js, React e Golang.
           </p>
         </div>
 
