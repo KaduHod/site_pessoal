@@ -1,6 +1,6 @@
 
 import { ArrowDownCircle } from 'lucide-react';
-import profileImage from "../../static/img/eu.jpeg"
+import profileImage from "../../static/img/eu fundo.png"
 const Hero = () => {
   return (
     <section id="início" className="min-h-screen flex items-center justify-center relative pt-16">
