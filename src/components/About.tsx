@@ -13,7 +13,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-slate-700">
-              Olá! Sou Carlos Ribas, um desenvolvedor full-stack com mais de 5 anos de experiência
+              Olá! Sou Carlos Ribas, um desenvolvedor full-stack com 5 anos de experiência
               no desenvolvimento de aplicações web e 4 anos no mercado de trabalho.
             </p>
             <p className="text-lg text-slate-700">
